@@ -1,0 +1,30 @@
+<div class="box">
+  <!-- <img src="https://img.freepik.com/free-vector/retro-bokeh-lights-background_1048-7856.jpg?size=626&ext=jpg&uid=R78773051&ga=GA1.1.655886246.1662755536&semt=ais"/>  -->
+
+
+
+<div class="container">
+<h1 class="text-center">Nee-MART PRODUCTS</h1>
+<div class="row">
+@for(item of data;track $index){
+  <div class="col-3 pb-3">
+
+<div class="card" style="width: 18rem; height: 35rem;">
+  <img src="{{item.image}}" height="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+  <h5 class="card-title">{{item.title}}</h5>
+    <p class="card-text">{{item.description| slice : 0:150}}</p>
+    <p class="card-text">{{item.rating.rate}}</p>
+    <a  class="btn btn-primary" routerLink="{{item.id}}">{{item.price}}</a>
+  </div>
+</div>
+</div>
+}
+</div>
+</div>
+</div>
+
+
+
+
+
